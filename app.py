@@ -541,9 +541,7 @@ def extract_education_entities(text):
     return entities
 
 
-# ===========================================================================================================
-
-
+# route function
 # =====================================================================================
 @app.route("/dev/get_bot_responses", methods=["GET"])
 def fetch_bot_responses():
@@ -592,9 +590,7 @@ def extract_text():
         return jsonify({"error": f"An error occurred: {str(e)}"}), 500
 
 
-# route of bedrock
-
-
+# route function of bedrock
 @app.route("/dev/bedrock_newchat", methods=["POST"])
 def ask_bedrock_newchat():
     try:
