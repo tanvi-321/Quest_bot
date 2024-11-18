@@ -24,10 +24,10 @@ aws_secret_key_hack = os.environ.get("hack_aws_secret_key")
 openai.api_key = os.environ.get("OPENAI_API_KEY")
 
 quest_bucket = os.getenv("quest_bucket")
-print("quest-bucket: ", quest_bucket)
+
 
 textract_bucket = os.getenv("textract_bucket")
-print("DEBUG: : quest textract bucket :", textract_bucket)
+
 s3 = boto3.client(
     "s3",
     aws_access_key_id=aws_access_key_hack,
@@ -65,7 +65,6 @@ dynamodb = boto3.resource(
 # Connect to the table
 table_name = "ChatHistory"
 table = dynamodb.Table(table_name)
-print("DEBUG ::: Table here:: ", table)
 
 
 ALLOWED_EXTENSIONS = {
